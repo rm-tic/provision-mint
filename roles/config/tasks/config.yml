@@ -1,4 +1,11 @@
 ---
+- name: Disable Swap
+  sysctl:
+    name: vm.swappiness
+    value: '0'
+    state: present
+  tags: sysctl
+
 - name: Set Custom BASH Profile
   blockinfile:
     path: "/home/{{ ansible_env.SUDO_USER }}/.bashrc"
