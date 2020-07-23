@@ -1,0 +1,76 @@
+---
+# vars file for install
+
+apt_key_urls:
+  - https://dl.google.com/linux/linux_signing_key.pub #GoogleChrome
+  - https://www.virtualbox.org/download/oracle_vbox_2016.asc #VirtualBox
+  - https://apt.enpass.io/keys/enpass-linux.key #Enpass 
+  - https://typora.io/linux/public-key.asc #Typora
+ 
+apt_repo_urls:
+  - url: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main #GoogleChrome
+    filename: google-chrome
+  - url: deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib #VirtualBox
+    filename: virtualbox
+  - url: deb https://apt.enpass.io/ stable main #Enpass
+    filename: enpass
+  - url: deb https://typora.io/linux ./
+    filename: typora
+
+apt_repo_ppa:
+  - url: ppa:sebastian-stenzel/cryptomator #Cryptomator
+    filename: cryptomator
+    
+pkgs_urls:
+  - "{{ url_deb_autokey.stdout_lines[0] }}" #AutoKey
+  - "{{ url_deb_autokey.stdout_lines[1] }}" #AutoKey
+  - "{{ url_deb_etcher.stdout }}" #BalenaEtcher
+  - https://download.teamviewer.com/download/linux/teamviewer_amd64.deb #TeamViewer
+  - "{{ url_deb_vagrant.stdout }}" #Vagrant
+
+pkgs:
+  - anki
+  - audacity
+  - build-essential
+  - calibre
+  - cryptomator
+  - enpass
+  - flameshot
+  - gimp
+  - gnome-tweaks
+  - google-chrome-stable
+  - handbrake
+  - htop
+  - inkscape
+  - intel-microcode
+  - jq
+  - openssh-server
+  - p7zip-full
+  - p7zip-rar
+  - peek
+  - preload
+  - qbittorrent
+  - remmina
+  - remmina-plugin-rdp
+  - remmina-plugin-vnc
+  - scrcpy
+  - steam
+  - teamviewer
+  - tmux
+  - toilet
+  - typora
+  - uget
+  - vim
+  - virtualbox-6.1
+  - xclip
+  - zsh
+
+flathub_pkgs:
+  - com.discordapp.Discord
+  - com.github.johnfactotum.Foliate
+  - com.meetfranz.Franz
+  - com.obsproject.Studio
+  - com.getpostman.Postman
+  - com.skype.Client
+  - com.visualstudio.code
+  - com.wps.Office
