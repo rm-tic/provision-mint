@@ -7,6 +7,12 @@
   loop: "{{ apt_key_urls }}"
   tags: add_repo
 
+- name: Add Microsoft Validation Key for VS Code
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    keyring: /etc/apt/trusted.gpg.d/packages.microsoft.gpg
+  tags: add_repo
+
 - name: Adds Additional URL Repositories
   apt_repository:
     repo: "{{ item.url }}"

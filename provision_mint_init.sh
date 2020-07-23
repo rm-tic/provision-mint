@@ -61,7 +61,6 @@ function INSTALL()
 
 	GIT_STATUS="$(CHECK_INSTALL git)"
 	PYTHON3_VENV_STATUS="$(CHECK_INSTALL python3-venv)"
-  	PYTHON3_PSUTIL_STATUS="$(CHECK_INSTALL python3-psutil)"
   	PYTHON3_PIP_STATUS="$(CHECK_INSTALL python3-pip)"
 
 	echo "Installing Essential Packages..."
@@ -76,18 +75,6 @@ function INSTALL()
 	else
 
 		echo ">> python3-venv is already installed."
-
-	fi
-
-	if [ "$PYTHON3_PSUTIL_STATUS" = "absent" ]; then
-
-    	APT_UPDATE
-    	sudo apt-get install -y python3-psutil > /dev/null 2>&1
-		echo ">> python3-psutil installed."
-
-	else
-
-		echo ">> python3-psutil is already installed."
 
 	fi
 

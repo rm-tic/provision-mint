@@ -26,10 +26,12 @@ apt_repo_urls:
     filename: virtualbox
   - url: deb https://apt.enpass.io/ stable main #Enpass
     filename: enpass
-  - url: deb https://typora.io/linux ./
+  - url: deb https://typora.io/linux ./ #Typora
     filename: typora
   - url: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable #Docker
     filename: docker
+  - url: deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main #VS Code
+    filename: vscode
 
 apt_repo_ppa:
   - url: ppa:sebastian-stenzel/cryptomator #Cryptomator
@@ -49,6 +51,7 @@ pkgs:
   - audacity
   - build-essential
   - calibre
+  - code
   - cryptomator
   - docker-ce
   - docker-ce-cli
@@ -91,5 +94,4 @@ flathub_pkgs:
   - com.obsproject.Studio
   - com.getpostman.Postman
   - com.skype.Client
-  - com.visualstudio.code
   - com.wps.Office
