@@ -161,7 +161,7 @@ function MAIN()
 echo
 echo "+----------------------------------+"
 echo "| Invencible (Ansible)             |"
-echo "| Project: provision-mint        |"
+echo "| Project: provision-mint          |"
 echo "| Author: Rodrigo Martins (IceTux) |"
 echo "| Creation Date: 2020-07-22        |"
 echo "+----------------------------------+"

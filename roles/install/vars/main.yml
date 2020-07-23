@@ -1,11 +1,22 @@
 ---
 # vars file for install
 
+remove_pkgs:
+  - drawing
+  - gnome-calendar
+  - gnote
+  - hexchat
+  - libreoffice*
+  - pix
+  - thunderbird*
+  - transmission*
+
 apt_key_urls:
   - https://dl.google.com/linux/linux_signing_key.pub #GoogleChrome
   - https://www.virtualbox.org/download/oracle_vbox_2016.asc #VirtualBox
   - https://apt.enpass.io/keys/enpass-linux.key #Enpass 
   - https://typora.io/linux/public-key.asc #Typora
+  - https://download.docker.com/linux/ubuntu/gpg #Docker
  
 apt_repo_urls:
   - url: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main #GoogleChrome
@@ -16,10 +27,14 @@ apt_repo_urls:
     filename: enpass
   - url: deb https://typora.io/linux ./
     filename: typora
+  - url: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable #Docker
+    filename: docker
 
 apt_repo_ppa:
   - url: ppa:sebastian-stenzel/cryptomator #Cryptomator
     filename: cryptomator
+  - url: ppa:graphics-drivers/ppa #NvidiaDrivers
+    filename: ppa_graphics
     
 pkgs_urls:
   - "{{ url_deb_autokey.stdout_lines[0] }}" #AutoKey
@@ -34,6 +49,9 @@ pkgs:
   - build-essential
   - calibre
   - cryptomator
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
   - enpass
   - flameshot
   - gimp

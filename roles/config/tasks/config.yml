@@ -7,8 +7,8 @@
     mode: 0644
     backup: yes
     insertafter: EOF
-    marker_begin: "\n\n##### CUSTOM BASH PROFILE #####\n"
-    marker_end: ""
+    marker_begin: "\n\n##### BEGIN - CUSTOM BASH PROFILE #####\n"
+    marker_end: "\n\n##### END - CUSTOM BASH PROFILE #####\n"
     marker: "{mark}"
     block: |
       #GENERAL
@@ -63,8 +63,8 @@
     mode: 0644
     backup: yes
     insertafter: '^ZSH_THEME.*'
-    marker_begin: "##### CUSTOM ZSH THEMES #####"
-    marker_end: ""
+    marker_begin: "##### BEGIN - CUSTOM ZSH THEMES #####"
+    marker_end: "##### END - CUSTOM ZSH THEMES #####"
     marker: "{mark}"
     block: |
       #ZSH_THEME="bira"
@@ -84,8 +84,8 @@
     mode: 0644
     backup: yes
     insertafter: EOF
-    marker_begin: "\n\n##### CUSTOM ZSH PROFILE #####\n"
-    marker_end: ""
+    marker_begin: "\n\n##### BEGIN - CUSTOM ZSH PROFILE #####\n"
+    marker_end: "\n\n##### END - CUSTOM ZSH PROFILE #####\n"
     marker: "{mark}"
     block: |
       #GENERAL

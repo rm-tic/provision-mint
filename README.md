@@ -1,4 +1,4 @@
-# Ansible Provision Workstation Ubuntu
+# Ansible Provision Workstation Linux Mint
 
 <p align="center">
   <img src="img/mint_logo.png">
@@ -19,7 +19,7 @@ Esta receita provisiona uma estação de trabalho recém formatada com Linux Min
 **SHELL**
 ```bash
 #WGET
-wget -qO- https://raw.githubusercontent.com/rm-tic/provision-ubuntu/master/provision_ubuntu_init.sh | bash -
+wget -qO- https://raw.githubusercontent.com/rm-tic/provision-mint/master/provision_mint_init.sh | bash -
 
 ```
 
